@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap");
+
+:root {
+  --light-green: #7ed56f;
+  --medium-green: #55c57a;
+  --dark-green: #28b485;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  color: aliceblue;
+}
+
+.nav .logo {
+  font-size: 30px;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(rgb(69, 252, 93), rgb(25, 88, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav ul {
+  position: relative;
+  display: flex;
+}
+.nav ul li {
+  color: var(--light-green);
+  text-decoration: none;
+  list-style: none;
+  margin-left: 30px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--light-green);
+  transition: 0.5s;
+}
+
+.nav ul li a:hover {
+  border-bottom: 2px solid var(--dark-green);
+  letter-spacing: 1px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+    url("./images/logo\ bg2.jpg");
+  background-size: cover;
+}
+
+.banner .content {
+  max-width: 900px;
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner .content h2 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(rgb(69, 252, 93), rgb(3, 27, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner .content h3 {
+  font-size: 25px;
+  background: -webkit-linear-gradient(rgb(69, 252, 93), rgb(3, 27, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url("./images/btn_bg.png");
+  background-size: cover;
+  border: none;
+  padding: 10px;
+  height: 135px;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.btn .btnText {
+  z-index: 1000;
+  color: rgb(2, 32, 2);
+  font-size: 18px;
+  padding-bottom: 14px;
+  padding-left: 2px;
+}
+
+.btn:hover {
+  letter-spacing: 2px;
+}
