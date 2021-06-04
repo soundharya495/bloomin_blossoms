@@ -9,6 +9,12 @@ function App() {
       <div className="App">
         <Navbar />
         <Landing />
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          adipisci nihil deserunt dolorem corrupti facere quos possimus enim,
+          voluptatem voluptatum aperiam recusandae odio repellat vitae est a
+          veniam modi error.
+        </div>
       </div>
     </BrowserRouter>
   );

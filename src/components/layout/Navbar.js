@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [navClass, setnavClass] = useState("nav");
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setnavClass(window.scrollY > 0 ? "nav sticky" : "nav");
+    });
+  }, []);
   return (
-    <div className="nav">
+    <div className={navClass}>
       <div>
         <span className="logo">B'B</span>
       </div>

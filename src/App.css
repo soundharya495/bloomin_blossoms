@@ -18,12 +18,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 100px;
+  padding: 30px 100px;
   z-index: 10000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: 0.5s;
+}
+
+.nav.sticky {
+  background: var(--light-green);
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   color: aliceblue;
 }
 
@@ -31,6 +37,14 @@
   font-size: 30px;
   font-weight: bolder;
   background: -webkit-linear-gradient(rgb(69, 252, 93), rgb(25, 88, 12));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav.sticky .logo {
+  font-size: 30px;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(rgb(16, 59, 3), rgb(9, 34, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -45,9 +59,20 @@
   margin-left: 30px;
 }
 
+.nav.sticky ul li {
+  text-decoration: none;
+  list-style: none;
+  margin-left: 30px;
+}
 .nav ul li a {
   text-decoration: none;
   color: var(--light-green);
+  transition: 0.5s;
+}
+
+.nav.sticky ul li a {
+  text-decoration: none;
+  color: rgb(16, 59, 3);
   transition: 0.5s;
 }
 
@@ -56,6 +81,10 @@
   letter-spacing: 1px;
 }
 
+.nav.sticky ul li a:hover {
+  border-bottom: 2px solid rgb(7, 26, 2);
+  letter-spacing: 1px;
+}
 .banner {
   position: relative;
   width: 100%;
@@ -95,7 +124,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background: url("./images/btn_bg.png");
+  background: url("./images/btn_bg.png"),
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
   background-size: cover;
   border: none;
   padding: 10px;
@@ -113,5 +143,5 @@
 }
 
 .btn:hover {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
