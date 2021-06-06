@@ -13,6 +13,19 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(rgb(3, 27, 4), rgb(69, 252, 93));
+  border: 3px solid -webkit-linear-gradient(rgb(69, 252, 93), rgb(3, 27, 4));
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -39,6 +52,9 @@
   background: -webkit-linear-gradient(rgb(69, 252, 93), rgb(25, 88, 12));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.nav .highlight {
+  color: red;
 }
 
 .nav.sticky .logo {
@@ -73,6 +89,7 @@
 .nav.sticky ul li a {
   text-decoration: none;
   color: rgb(16, 59, 3);
+  font-weight: bold;
   transition: 0.5s;
 }
 
@@ -144,4 +161,52 @@
 
 .btn:hover {
   letter-spacing: 1px;
+}
+
+section {
+  padding: 100px;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .col50 {
+  position: relative;
+  width: 48%;
+}
+
+.row .col50 .abtimg {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.row .col50 .abtimg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.row .col50 .abtimg img:hover {
+  transform: scale(1.1);
+}
+
+section .titleText {
+  color: #111;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+section .titleText span {
+  color: var(--medium-green);
+  font-weight: 700;
+  font-size: 1.5em;
 }

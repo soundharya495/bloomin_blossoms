@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import About from "./About";
+
 const Landing = () => {
   return (
     <div>
@@ -14,6 +16,7 @@ const Landing = () => {
           </button>
         </div>
       </div>
+      <About />
     </div>
   );
 };
